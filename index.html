@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ian Royes — finance kid who ships</title>
+<meta name="description" content="Finance & Accounting senior at Oakwood University. Built university ad sales from zero to $30,000 a semester. Ships software. Looking for a founder's associate seat at a seed-stage company.">
+<meta property="og:title" content="Ian Royes — finance kid who ships">
+<meta property="og:description" content="Built university ad sales from zero to $30,000 a semester. Ships software. Looking for a founder's associate seat at a seed-stage company.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pine: #12402D;
+    --pine-deep: #0C2C1F;
+    --pine-line: rgba(255, 255, 255, .14);
+    --bone: #EFF1EA;
+    --bone-2: #E4E8DD;
+    --ink: #14201A;
+    --ink-2: #48584F;
+    --ink-3: #7A8A80;
+    --brass: #A8792B;
+    --brass-light: #D9A441;
+    --rule: #D3D9CB;
+    --display: "Fraunces", Georgia, serif;
+    --sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bone);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--brass-light); color: var(--ink); }
+
+  a { color: inherit; }
+  a:focus-visible { outline: 2px solid var(--brass-light); outline-offset: 3px; }
+
+  .wrap { width: 100%; max-width: 940px; margin: 0 auto; padding: 0 24px; }
+
+  .label {
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .display {
+    font-family: var(--display);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -.02em;
+    text-wrap: balance;
+  }
+
+  .tnum { font-variant-numeric: tabular-nums; }
+
+  /* ---------------------------------------------------------- hero --- */
+  .hero {
+    background: var(--pine);
+    color: #fff;
+    padding: 64px 0 72px;
+  }
+  .hero .label { color: var(--brass-light); }
+
+  .name {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(44px, 11vw, 92px);
+    line-height: .96;
+    letter-spacing: -.035em;
+    margin: 18px 0 0;
+  }
+
+  .tagline {
+    font-family: var(--display);
+    font-weight: 500;
+    font-style: italic;
+    font-size: clamp(21px, 4.6vw, 31px);
+    line-height: 1.2;
+    color: var(--brass-light);
+    margin: 14px 0 0;
+  }
+
+  .lede {
+    max-width: 50ch;
+    margin: 26px 0 0;
+    font-size: clamp(16px, 2.3vw, 18px);
+    line-height: 1.62;
+    color: rgba(255, 255, 255, .82);
+  }
+  .lede strong { color: #fff; font-weight: 600; }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid var(--pine-line);
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    transition: background-color .16s ease, border-color .16s ease;
+  }
+  .chip:hover { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .3); }
+  .chip-solid {
+    background: var(--brass-light);
+    border-color: var(--brass-light);
+    color: var(--pine-deep);
+    font-weight: 600;
+  }
+  .chip-solid:hover { background: #E5B24E; border-color: #E5B24E; }
+
+  /* -------------------------------------------------------- record --- */
+  section { padding: 68px 0; }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 40px;
+  }
+  .sec-head .label { color: var(--ink-3); }
+  .sec-head .note { margin-left: auto; font-size: 13px; color: var(--ink-3); }
+
+  .record { display: grid; gap: 46px; }
+
+  .item { display: grid; gap: 8px; }
+
+  .figure {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(40px, 8.5vw, 62px);
+    line-height: 1;
+    letter-spacing: -.035em;
+    color: var(--brass);
+    font-variant-numeric: tabular-nums;
+  }
+  .figure small {
+    display: block;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 8px;
+  }
+
+  .item h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(20px, 3.4vw, 25px);
+    line-height: 1.18;
+    letter-spacing: -.02em;
+    margin: 6px 0 0;
+  }
+  .item p { margin: 0; max-width: 62ch; color: var(--ink-2); }
+  .item .meta {
+    font-size: 13px;
+    color: var(--ink-3);
+    margin-top: 2px;
+  }
+
+  @media (min-width: 720px) {
+    .item {
+      grid-template-columns: 190px minmax(0, 1fr);
+      column-gap: 40px;
+      align-items: start;
+    }
+    .item .figure { grid-row: span 3; }
+  }
+
+  /* ---------------------------------------------------------- want --- */
+  .want { background: var(--pine); color: #fff; }
+  .want .sec-head { border-color: var(--pine-line); }
+  .want .sec-head .label { color: var(--brass-light); }
+  .want h2 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(26px, 5.2vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -.025em;
+    margin: 0;
+    max-width: 20ch;
+  }
+  .want .cols {
+    display: grid;
+    gap: 28px;
+    margin-top: 36px;
+  }
+  @media (min-width: 720px) { .want .cols { grid-template-columns: repeat(3, 1fr); gap: 32px; } }
+  .want .cols h4 {
+    font-size: 12px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--brass-light);
+    margin: 0 0 8px;
+  }
+  .want .cols p { margin: 0; color: rgba(255, 255, 255, .82); font-size: 15px; }
+
+  .pull {
+    margin: 40px 0 0;
+    padding-left: 22px;
+    border-left: 3px solid var(--brass-light);
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(18px, 3.2vw, 23px);
+    line-height: 1.34;
+    max-width: 36ch;
+  }
+
+  /* -------------------------------------------------------- shipped --- */
+  .ships { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+  .ship {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 14px;
+    padding: 16px 2px;
+    border-bottom: 1px solid var(--rule);
+    text-decoration: none;
+    transition: padding-left .16s ease, background-color .16s ease;
+  }
+  .ship:hover { padding-left: 10px; background: var(--bone-2); }
+  .ship .nm { font-weight: 600; font-size: 16px; }
+  .ship .ds { color: var(--ink-2); font-size: 14px; flex: 1 1 240px; }
+  .ship .go { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--brass); font-weight: 600; }
+
+  .aside {
+    margin-top: 26px;
+    font-size: 14px;
+    color: var(--ink-3);
+    max-width: 62ch;
+  }
+
+  /* --------------------------------------------------------- foot --- */
+  footer {
+    background: var(--pine-deep);
+    color: #fff;
+    padding: 62px 0 46px;
+  }
+  footer h2 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(26px, 5.4vw, 40px);
+    line-height: 1.1;
+    letter-spacing: -.025em;
+    margin: 0 0 8px;
+    max-width: 18ch;
+  }
+  footer p { color: rgba(255, 255, 255, .7); margin: 0 0 26px; max-width: 46ch; }
+  .foot-note {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--pine-line);
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .4);
+  }
+
+  /* ------------------------------------------------------- motion --- */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+  .rise { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
+  .d1 { animation-delay: .06s; }
+  .d2 { animation-delay: .13s; }
+  .d3 { animation-delay: .2s; }
+  .d4 { animation-delay: .27s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="label rise">Finance &amp; Accounting &middot; Product &amp; AI &middot; Available full time now</p>
+    <h1 class="name rise d1">Ian Royes</h1>
+    <p class="tagline rise d2">Finance kid who ships.</p>
+    <p class="lede rise d3">
+      I built my university&rsquo;s ad sales from zero to <strong>$30,000 a semester</strong>,
+      run a production company, and ship software &mdash; my personal-finance app is live.
+      I&rsquo;m looking for a founder&rsquo;s associate seat at a seed-stage company.
+    </p>
+    <div class="contact-row rise d4">
+      <a class="chip chip-solid" href="mailto:contact@royzmediagroup.com">contact@royzmediagroup.com</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">Track record</span>
+      <span class="note">Three things worth knowing</span>
+    </div>
+
+    <div class="record">
+
+      <article class="item">
+        <div class="figure tnum">$30K<small>per semester, from zero</small></div>
+        <h3>Built a university&rsquo;s ad revenue from nothing</h3>
+        <p>
+          As SGA Director of Revenue at Oakwood, I launched the university newspaper, sold the
+          sponsorships myself, negotiated the deals, and built the forecasting models behind
+          them. It went from no revenue line at all to more than $30,000 a semester.
+        </p>
+        <p class="meta">SGA Director of Revenue &middot; Oakwood University &middot; 2025&ndash;26</p>
+      </article>
+
+      <article class="item">
+        <div class="figure">Live<small>built end to end</small></div>
+        <h3>SpendType &mdash; a personal-finance app in production</h3>
+        <p>
+          A spending-personality assessment that turns into a real profile and habit tracker.
+          I designed it, built it, and shipped it. It&rsquo;s the clearest evidence that I close
+          the loop from idea to live product without being told how.
+        </p>
+        <p class="meta"><a href="https://spendtype.vercel.app" target="_blank" rel="noopener">spendtype.vercel.app</a></p>
+      </article>
+
+      <article class="item">
+        <div class="figure tnum">2024<small>founded, still running</small></div>
+        <h3>Royz Media Group LLC</h3>
+        <p>
+          My multimedia production company. Real clients, real invoices, real P&amp;L &mdash;
+          client acquisition, budgeting, and the ROI analytics that tell me which work is
+          actually worth taking.
+        </p>
+        <p class="meta">Founder &middot; 2024&ndash;present</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="want">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">What I&rsquo;m looking for</span>
+    </div>
+    <h2>A founder&rsquo;s associate seat at a company that just started hiring.</h2>
+
+    <div class="cols">
+      <div>
+        <h4>The role</h4>
+        <p>
+          Founder&rsquo;s associate, chief of staff, or BizOps. The generalist who does revenue
+          ops, modeling, and whatever is on fire that week.
+        </p>
+      </div>
+      <div>
+        <h4>Availability</h4>
+        <p>
+          Available to start full time immediately. I would take a leave of absence from
+          Oakwood for the right role.
+        </p>
+      </div>
+      <div>
+        <h4>Stage</h4>
+        <p>
+          Seed or Series A, small team, where one person wearing four hats is the point rather
+          than a problem.
+        </p>
+      </div>
+    </div>
+
+    <p class="pull">
+      Most people who can build the model can&rsquo;t ship the product. I do both, and I&rsquo;d
+      rather do them somewhere small.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">Also shipped</span>
+      <span class="note">All live, all mine</span>
+    </div>
+
+    <div class="ships">
+      <a class="ship" href="https://spendtype.vercel.app" target="_blank" rel="noopener">
+        <span class="nm">SpendType</span>
+        <span class="ds">Personal-finance app &mdash; spending personality, profile, habits</span>
+        <span class="go">Visit &rarr;</span>
+      </a>
+      <a class="ship" href="https://deposit-shield.vercel.app" target="_blank" rel="noopener">
+        <span class="nm">Deposit Shield</span>
+        <span class="ds">Helps renters protect and recover their security deposit</span>
+        <span class="go">Visit &rarr;</span>
+      </a>
+      <a class="ship" href="https://royz-media-group.vercel.app" target="_blank" rel="noopener">
+        <span class="nm">Royz Media Group</span>
+        <span class="ds">My agency &mdash; client app builds and demos</span>
+        <span class="go">Visit &rarr;</span>
+      </a>
+      <a class="ship" href="https://ianroyz.substack.com" target="_blank" rel="noopener">
+        <span class="nm">Everything But College</span>
+        <span class="ds">Writing on the things school doesn&rsquo;t teach you</span>
+        <span class="go">Read &rarr;</span>
+      </a>
+    </div>
+
+    <p class="aside">
+      Latest technical work: <a href="https://github.com/ianroyes-sys/taubench-lab" target="_blank" rel="noopener">TauBench Lab</a>
+      &mdash; 384 scripted SaaS support trials and reliability analysis of 1,980 published benchmark episodes.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>Hiring a generalist this year?</h2>
+    <p>
+      Fifteen minutes is plenty to work out whether it&rsquo;s a fit. I&rsquo;m easy to reach
+      and quick to reply.
+    </p>
+    <div class="contact-row">
+      <a class="chip chip-solid" href="mailto:contact@royzmediagroup.com">contact@royzmediagroup.com</a>
+      <a class="chip" href="/resume.html">Résumé</a>
+      <a class="chip" href="https://www.linkedin.com/in/ian-royes-8027ab242/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="foot-note">
+      Ian Royes &middot; Oakwood University &middot; Huntsville, Alabama
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
